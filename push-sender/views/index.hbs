@@ -1,0 +1,9 @@
+{{#each subscriptions}}
+	<form action="/push" method="POST">
+		<input type="hidden" name="subscription" value="{{this.subscription}}">
+	  <label>{{this.name}}</label>
+	  <input type="submit" value="Enviar push">
+	</form>
+{{else}}
+  <h2>No subscribers :(</h2>
+{{/each}}
